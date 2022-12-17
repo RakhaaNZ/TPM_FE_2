@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* 
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation: rotate 2s ease-in-out infinite forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#box2 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transform: translate(40px 50px);
+    animation: skew 2s ease-in-out infinite forwards;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0,0);
+    }
+    100% {
+        transform: skew(45deg,45deg);
+    }
+}
+
+.grid {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(1fr, 3);
+    grid-gap: 8px;
+}
+
+.grid-item {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: blue;
+    transition: 1s ease-in-out width, 1s ease-in-out height;
+}
+
+.grid-item:hover::before {
+    width: 1000px;
+    height: 1000px;
+}
+
+.grid-item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-column: span 3; 
+}
+
+.grid-item:active {
+    background-color: red;
+}
+
+.grid-input[type="text"] {
+    margin: 100px 0;
+}
+
+.grid-input[type="text"]:focus {
+    background-color: rgb(255, 242, 0);
+}
+
+#box3 {
+    background-color: red;
+    //calc = (+ = / *)
+    width: calc(100vw - 64px);
+    height: 100px;
+}
+
+#box4 {
+    background-color: rgb(43, 0, 255);
+    width: max(80%, 616px);
+    height: 100px;
+}
+
+#box5 {
+    background-color: rgb(255, 0, 191);
+    width: min(80%, 300px);
+    height: 100px;
+}
+
+#box6 {
+    background-color: rgb(0, 255, 21);
+    width: clamp(200px, 50%, 400px);
+    height: 100px;
+}
+
+@media only screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+} */
+
+
+.container {
+    padding: 1.5rem 6rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+#navbar .container {
+    background-color: #D0DCFA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .container .nav-link {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+#navbar .container .nav-link .nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+#navbar .container .nav-link .contact-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #8cadff;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#navbar .container .nav-link .contact-btn > a {
+    color: white;
+}
+
+.nav-link a::after {
+    display: flex;
+    content: '';
+    border-bottom: solid 2px #6690fa;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-link a:hover::after {
+    transform: scaleX(1);
+}
